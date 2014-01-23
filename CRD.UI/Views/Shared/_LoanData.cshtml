@@ -1,0 +1,33 @@
+﻿@model CRD.UI.Models.Loan
+@using (Ajax.BeginForm("UpdateLoanDetails",new AjaxOptions{HttpMethod = "Post",UpdateTargetId = "result"})){
+<table>
+          <tr>
+              <td>@Html.LabelFor(x => x.FirstName)</td>
+              <td>@Html.TextBoxFor(x => x.FirstName)</td>
+          </tr>
+          <tr>
+              <td>@Html.LabelFor(x => x.LastName)</td>
+              <td>@Html.TextBoxFor(x => x.LastName)</td>
+          </tr>
+          <tr>
+              <td>@Html.LabelFor(x => x.LoanId)</td>
+              <td>@Html.TextBoxFor(x => x.LoanId)</td>
+          </tr>
+          <tr>
+              <td>@Html.LabelFor(x => x.Id)</td>
+              <td>@Html.TextBoxFor(x => x.Id)</td>
+          </tr>
+          <tr>
+              <td>@Html.LabelFor(x => x.CreatedDate)</td>
+              <td>@Html.TextBoxFor(x => x.CreatedDate)</td>
+          </tr>
+          <tr>
+              <td>@Html.LabelFor(x => x.UpdateDate)</td>
+              <td>@Html.TextBoxFor(x => x.UpdateDate)</td>
+          </tr>
+      </table>
+<input type="submit" value="Update"/>
+<div id="result"></div>
+}
+
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>

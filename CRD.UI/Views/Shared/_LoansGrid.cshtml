@@ -1,0 +1,23 @@
+﻿@model  IEnumerable<CRD.UI.Models.Loan>
+
+<table>
+    <tr>
+        
+        <td>Id</td>
+        <td>Load Number</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.LoanId</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td><a href="#" value="Details" onclick="ShowLoanDetails(@item.Id)">Details</a></td>
+        </tr>
+    }
+</table>
+ <div id ="loanData">
+</div>
